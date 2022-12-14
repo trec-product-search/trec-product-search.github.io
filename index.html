@@ -1,1 +1,128 @@
-Trec Product Search 2023
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TREC 2023 Product Search Track</title>
+    <meta name="generator" content="Jekyll v3.9.2" />
+    <meta property="og:title" content="TREC 2023 Product Search Track" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="website for TREC 2023 Product Search Track" />
+    <meta property="og:description" content="website for TREC 2023 Product Search Track" />
+    <link rel="canonical" href="https://trec-product-search.github.io/index.html" />
+    <meta property="og:url" content="https://trec-product-search.github.io/index.html" />
+    <meta property="og:site_name" content="trec product search" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:title" content=" TREC 2023 Product Search Track"" />
+    <link rel="stylesheet" href="/msmarco/assets/css/style.css?v=cd67426fc900426db57b7b20d009bba5fd416420">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8N7CE1L36"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K8N7CE1L36');
+    </script>
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <h1>End To End Product Retrieval</h1>
+      <p><strong>Dataset paper:</strong> <a href="">Coming Soon</a></p>
+      <h2 id="coordinators">Coordinators</h2>
+      <p><a href='https://spacemanidol.com/'>Daniel Campos (University of Illinois)</a>, Surya Kallumadi(Lowes), Corby Rosset (Microsoft), ChengXiang Zhai (University of Illinois), Alessandro Magnani (Walmart)</p>
+      <p>For any questions, comments, or suggestions please <a href="mailto:dcampos3@illinois.edu">email Daniel Campos</a></p>
+      <h2 id="timetable">Timetable</h2>
+      <ul>
+        <li>April 15th: 2023 queries released to participants for all tasks</li>
+        <li>August ?: Submissions close for all tasks</li>
+        <li>November ?-?: TREC conference</li>
+      </ul>
+      <h2 id="introduction">Introduction</h2>
+      <p>The Product Search Track studies information retrieval in the field of product search. This is the case where there is a corpus of many products where the user goal and intent is to find the product that suits their need. </p>
+      <p>Our main goal is to study what how end to end retrieval systems can be built and evaluated given a large set of products.</p>
+      <h2 id="track-tasks">Track Tasks</h2>
+      <p>The product seacch track has three tasks: ranking, end to end retrieval and multi modal end to end retrieval. You can submit up to three runs for each of these tasks.</p>
+      <p>Each track uses the same training data originating from the <a href='https://amazonkddcup.github.io/'>ESCI Challenge for Improving Product Search</a> and shares the same set of evaluation queries. </p>
+      <p>Below the three tasks are described in more detail.</p>
+      <h3 id="ranking">Product Ranking Task</h3>
+      <p>The first task focuses on product ranking. In task we provide an initial ranking of 100 documents from a BM25 baseline and you are expected to re-rank the products in terms of their relevance to the users given intent. </p>
+      <p>The ranking provides a focused task where the candidate sets are fixed and there is no need to implement complex end to end systems which makes experimentation quick and runs easily comparable.</p>
+      <h3 id="retrieval">Product Retrieval Task</h3>
+      <p>The second task focuses on end to end product retrieval. In task we provide an a large collection of products and participants need to design end to end retrieval systems which leverage whichever information they find relevant/useful.</p>
+      <p>Unlike the ranking task, the focus here is in understanding the interplay between retrieval and reranking systems.</p>
+      <h3 id="retrieval">Multi-Modal Product Retrieval Task</h3>
+      <p>The third task focuses on end to end product retrieval using multiple modalities. In task we provide an a large collection of products where each product features additional attributes and information such as related clicks and images and participants need to design end to end retrieval systems which leverage whichever information they find relevant/useful.</p>
+      <p>The focus of this task is to understand the interplay between different modalities and the value which additional potentially weak data provides.</p>
+      <h3 id="use-of-external-information">Use of external information</h3>
+      <p>You are allowed to use external information while developing your runs. When you submit your runs, please fill in a form listing what evidence you used, for example an external corpus such as Wikipedia or a pre-trained model or some proprietary corpus.</p>
+      <p>When submitting runs, participants will be able to indicate what resources they used. This will allow us to analyze the runs and break they down into types.</p>
+      <h3 id='query-selection'>Query Selection</h3>
+      <p>TBD</p>
+      <h3 id='baselines'>Baselines</h3>
+      <p>TBD</p>
+      <h3 id="datasets">Datasets</h3>
+      <p>As mentioned above, each of the tasks share training data and test queries so there is only one dataset provided below</p>
+      <h4 id="document-ranking-dataset">End To End Retrieval</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Filename</th>
+            <th style="text-align: right">File size</th>
+            <th style="text-align: right">Num Records</th>
+            <th style="text-align: right">Description</th>
+            <th>Format</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Corpus</td>
+            <td><a href=""></a>coming soon</td>
+            <td style="text-align: right">N GB</td>
+            <td style="text-align: right"></td>
+            <td style="text-align: right"></td>
+            <td>json: docid, url, title, body</td>
+          </tr>
+          <tr>
+            <td>Train</td>
+            <td><a href=""></a>coming soon</td>
+            <td style="text-align: right">N GB</td>
+            <td style="text-align: right"></td>
+            <td style="text-align: right"></td>
+            <td>tsv: qid, query</td>
+          </tr>
+          <tr>
+            <td>Dev</td>
+            <td><a href=""></a>coming soon</td>
+            <td style="text-align: right">N GB</td>
+            <td style="text-align: right"></td>
+            <td style="text-align: right"></td>
+            <td>tsv: qid, query</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="submission-evaluation-and-judging">Submission, evaluation and judging</h2>
+      <p>We will be following the classic TREC submission formating, which is repeated below. White space is used to separate columns. The width of the columns in the format is not important, but it is important to have exactly six columns per line with at least one space between the columns.</p>
+      <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 Q0 pid1    1 2.73 runid1
+      1 Q0 pid2    1 2.71 runid1
+      1 Q0 pid3    1 2.61 runid1
+      1 Q0 pid4    1 2.05 runid1
+      1 Q0 pid5    1 1.89 runid1
+      </code></pre></div></div>
+      <p>, where:</p>
+      <ul>
+        <li>the first column is the topic (query) number.</li>
+        <li>the second column is currently unused and should always be “Q0”.</li>
+        <li>the third column is the official identifier of the retrieved passage in context of passage ranking task, and the identifier of the retrieved document in context of document ranking task.</li>
+        <li>the fourth column is the rank the passage/document is retrieved.</li>
+        <li>the fifth column shows the score (integer or floating point) that generated the ranking. This score <strong>must</strong> be in descending (non-increasing) order.</li>
+        <li>The sixth column is the ID of the run you are submitting.</li>
+      </ul>
+      <p>As the official evaluation set, we provide a set of ? queries where ? or more will be judged by NIST assessors. For this purpose, NIST will be using depth pooling with separate pools each tasks. Products in these pools will then be labelled by NIST assessors using multi-graded judgments, allowing us to measure NDCG.</p>
+      <p>The main type of TREC submission is <em>automatic</em>, which means there was not manual intervention in running the test queries. This means you should not adjust your runs, rewrite the query, retrain your model, or make any other sorts of manual adjustments after you see the test queries. The ideal case is that you only look at the test queries to check that they ran properly (i.e. no bugs) then you submit your automatic runs. However, if you want to have a human in the loop for your run, or do anything else that uses the test queries to adjust your model or ranking, you can mark your run as <em>manual</em> and provide a description of what types of alterations were performed. </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
