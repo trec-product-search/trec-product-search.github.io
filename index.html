@@ -34,7 +34,7 @@
       <h1>End To End Product Retrieval</h1>
       <!--<p><strong>Dataset paper:</strong> <a href="">Coming Soon</a></p> -->
       <h2 id="coordinators">Coordinators</h2>
-      <p><a href='https://spacemanidol.com/'>Daniel Campos (University of Illinois)</a>, Surya Kallumadi(Lowes), Corby Rosset (Microsoft), ChengXiang Zhai (University of Illinois), Alessandro Magnani (Walmart)</p>
+      <p><a href='https://spacemanidol.com/'>Daniel Campos (University of Illinois)</a>, <a href='https://twitter.com/kallumadi?lang=en'> Surya Kallumadi(Lowes)</a>, <a href='http://corbyrosset.com/' >Corby Rosset (Microsoft)</a>, <a href='http://czhai.cs.illinois.edu/'>ChengXiang Zhai (University of Illinois)</a>, <a href='https://www.linkedin.com/in/alemagnani/'>Alessandro Magnani (Walmart)</a></p>
       <p>For any questions, comments, or suggestions please <a href="mailto:dcampos3@illinois.edu">email Daniel Campos</a>or sign up for email updates</p>
       <div id="mc_embed_signup">
           <form action="https://github.us21.list-manage.com/subscribe/post?u=e4f0c0ae69016a1dc61978146&amp;id=a8af48cfa8&amp;f_id=00a598e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -64,18 +64,18 @@
       <h2 id="timetable">Timetable</h2>
       <ul>
         <li>May 1st: 2023 queries released to participants for all tasks</li>
-        <li>August 9th: Submissions close for all tasks</li>
+        <li>August 1st: Submissions close for all tasks</li>
         <li>November 12-14th: TREC conference</li>
       </ul>
       <h2 id="introduction">Introduction</h2>
       <p>The Product Search Track studies information retrieval in the field of product search. This is the case where there is a corpus of many products where the user goal and intent is to find the product that suits their need. </p>
       <p>Our main goal is to study what how end to end retrieval systems can be built and evaluated given a large set of products.</p>
       <h2 id="track-tasks">Track Tasks</h2>
-      <p>The product seacch track has three tasks: ranking, end to end retrieval and multi modal end to end retrieval. You can submit up to three runs for each of these tasks.</p>
+      <p>The product search track has three tasks: ranking, end to end retrieval and multi modal end to end retrieval. You can submit up to three runs for each of these tasks.</p>
       <p>Each track uses the same training data originating from the <a href='https://amazonkddcup.github.io/'>ESCI Challenge for Improving Product Search</a> and shares the same set of evaluation queries. </p>
       <p>Below the three tasks are described in more detail.</p>
       <h3 id="ranking">Product Ranking Task</h3>
-      <p>The first task focuses on product ranking. In task we provide an initial ranking of 100 documents from a BM25 baseline and you are expected to re-rank the products in terms of their relevance to the users given intent. </p>
+      <p>The first task focuses on product ranking. In task we provide an initial ranking of 1000 documents from a BM25 baseline and you are expected to re-rank the products in terms of their relevance to the users given intent. </p>
       <p>The ranking provides a focused task where the candidate sets are fixed and there is no need to implement complex end to end systems which makes experimentation quick and runs easily comparable.</p>
       <h3 id="retrieval">Product Retrieval Task</h3>
       <p>The second task focuses on end to end product retrieval. In task we provide an a large collection of products and participants need to design end to end retrieval systems which leverage whichever information they find relevant/useful.</p>
@@ -86,13 +86,9 @@
       <h3 id="use-of-external-information">Use of external information</h3>
       <p>You are allowed to use external information while developing your runs. When you submit your runs, please fill in a form listing what evidence you used, for example an external corpus such as Wikipedia or a pre-trained model or some proprietary corpus.</p>
       <p>When submitting runs, participants will be able to indicate what resources they used. This will allow us to analyze the runs and break they down into types.</p>
-      <h3 id='query-selection'>Query Selection</h3>
-      <p>TBD</p>
-      <h3 id='baselines'>Baselines</h3>
-      <p>TBD</p>
       <h3 id="datasets">Datasets</h3>
       <p>As mentioned above, each of the tasks share training data and test queries so there is only one dataset provided below</p>
-      <h4 id="document-ranking-dataset">End To End Retrieval</h4>
+      <p>All datasets can be found on Hugginface under the organization of <a href='https://huggingface.co/trec-product-search'>TREC Product Search</a>
       <table>
         <thead>
           <tr>
@@ -106,29 +102,71 @@
         </thead>
         <tbody>
           <tr>
-            <td>Corpus</td>
-            <td><a href=""></a>coming soon</td>
-            <td style="text-align: right">N GB</td>
-            <td style="text-align: right"></td>
-            <td style="text-align: right"></td>
-            <td>json: docid, url, title, body</td>
+            <td>Collection</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/trec/collection.trec.gz">Collection (TREC Format)</a</td>
+            <td style="text-align: right">1.81 GB (568mb compressed)</td>
+            <td style="text-align: right">1661907</td>
+            <td style="text-align: right">TREC style corpus collection</td>
+            <td>tsv: docid\tTitle\tDescription</td>
           </tr>
-          <tr>
-            <td>Train</td>
-            <td><a href=""></a>coming soon</td>
-            <td style="text-align: right">N GB</td>
+	  <tr>
+            <td>Collection</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/pyserini-simple/collection.jsonl.gz">Collection (Pyserini- Simplified Text Input</a</td>
+            <td style="text-align: right">1.81 GB (568mb compressed)</td>
+            <td style="text-align: right">1661907</td>
+            <td style="text-align: right">TREC style corpus collection</td>
+            <td>json: docid, contents (Title and Description) </td>
+          </tr>			
+	  <tr>
+            <td>Triples</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Triples/resolve/main/train.jsonl.gz">Train Triples JSONl</a></td>
+            <td style="text-align: right">6.23 GB (1.28 GB compressed)</td>
             <td style="text-align: right"></td>
             <td style="text-align: right"></td>
             <td>tsv: qid, query</td>
           </tr>
-          <tr>
-            <td>Dev</td>
-            <td><a href=""></a>coming soon</td>
-            <td style="text-align: right">N GB</td>
+	  <tr>
+            <td>Triples</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Triples/resolve/main/dev.jsonl.gz">Dev Triples JSONl</a></td>
+            <td style="text-align: right">2.67 GB (550.3 MB compressed)</td>
             <td style="text-align: right"></td>
             <td style="text-align: right"></td>
             <td>tsv: qid, query</td>
-          </tr>
+          </tr>	
+	  <tr>
+            <td>Triples</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Triples/resolve/main/dev.parquet.gz">Dev Triples PARQUET</a></td>
+            <td style="text-align: right">938 MB (777.2 MB compressed)</td>
+            <td style="text-align: right"></td>
+            <td style="text-align: right"></td>
+            <td>tsv: qid, query</td>
+          </tr>	
+	  <tr>
+            <td>Triples</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Triples/resolve/main/test.parquet.gz">Test Triples PARQUET</a></td>
+            <td style="text-align: right">47 KB (37 KB compressed)</td>
+            <td style="text-align: right"></td>
+            <td style="text-align: right"></td>
+            <td>tsv: qid, query</td>
+          </tr>					 
+	   <tr>
+            <td>Triples</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Triples/resolve/main/test.json.gz">Test Triples JSON</a></td>
+            <td style="text-align: right">125 KB (30 KB compressed)</td>
+            <td style="text-align: right"></td>
+            <td style="text-align: right"></td>
+            <td>tsv: qid, query</td>
+          </tr>	
+	  <tr>
+            <td>Query to Query ID</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/qid2query.tsv">Query2QueryID </a></td>
+            <td style="text-align: right">946 KB</td>
+            <td style="text-align: right">30734</td>
+            <td style="text-align: right">TREC style QueryID to Query Text</td>
+            <td>tsv: qid\tquery</td>
+          </tr>	
+					 
+					 
         </tbody>
       </table>
       <h2 id="submission-evaluation-and-judging">Submission, evaluation and judging</h2>
