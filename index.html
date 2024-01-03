@@ -158,7 +158,7 @@
             <td>tsv: qid,query text </td>
           </tr>
 	  <tr>
-            <td>Triples</td>
+            <td>Training Triples (Query, Positive, Negative Pairs)</td>
             <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Triples/resolve/main/train.jsonl.gz">Train Triples JSONl</a></td>
             <td style="text-align: right">6.23 GB (1.28 GB compressed)</td>
             <td style="text-align: right">20,888</td>
@@ -185,6 +185,14 @@
       </table>
       <h2 id="getting-started">Getting Started/Tevatron Usage</h2>
       <p>To allow quick experimentation we have gone ahead and made the datasets compatible with the popular <a href="https://github.com/texttron/tevatron/">Tevatron </a> library. To train, index, and retrieve from the product search researchs can take the <a href='https://github.com/texttron/tevatron/blob/main/examples/example_msmarco.md'> Tevatron MSMARCO Example Guide</a> and just update the dataset names and run with your favorite model variant. For simplicity an example is shown below. </p>
+      <ul>
+	      <li>First go ahead and train a model using the triples and a simple bert-base bi-encoder model using: python -m tevatron.driver.train --output_dir product_search_bi_encoder_baseline --model_name_or_path bert-base-uncased --dataset_name trec-product-search/Product-Search-Triples </li>
+	      <li>Using your trained model (or any other trained bi-encoder) go ahead and encode the corpus using this command: python -m tevatron.driver.encode --output_dir=temp --model_name_or_path product_search_bi_encoder_baseline --dataset_name trec-product-search/product-search-corpus --encoded_save_path corpus_emb.pkl --encode_num_shard 1 --encode_shard_index 0</li>
+      	      <li>Go ahead and create the query embeddings for the 2023 queries using the following command: python -m tevatron.driver.encode --output_dir=temp  --model_name_or_path product_search_bi_encoder_baseline   --dataset_name trec-product-search/Product-Search-Triples/test  --encoded_save_path query_emb.pkl  --q_max_len 32  --encode_is_qry</li>
+	      <li>Using the product and query embeddings retrieve top results using the following command: python -m tevatron.faiss_retriever --query_reps query_emb.pkl --passage_reps corpus_emb.pkl -depth 100 --batch_size -1 --save_text --save_ranking_to run.txt</li>
+	      <li>Convert the ranking to TREC format: python -m tevatron.utils.format.convert_result_to_trec --input run.txt --output run.trec</li>
+	      <li>Evaluate with TREC eval or ir_measures using the 2023 QRELs listed above: ir_measures product_qrel.trec run.trec NDCG@1 NDCG@3 NDCG@5 NDCG@10 NDCG@100 NDCG@1000 AP@1 AP@3 AP@5 AP@10 AP@100 AP@1000</li>
+      </ul>
       <h2 id="submission-evaluation-and-judging">Submission, evaluation and judging</h2>
       <p>We will be following the classic TREC submission formating, which is repeated below. White space is used to separate columns. The width of the columns in the format is not important, but it is important to have exactly six columns per line with at least one space between the columns.</p>
       <p>, where:</p>
