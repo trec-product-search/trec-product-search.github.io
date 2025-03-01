@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TREC 2024 Product Search Track</title>
+    <meta name="generator" content="Jekyll v3.9.2" />
+    <meta property="og:title" content="TREC 2024 Product Search Track" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="website for TREC 2024 Product Search Track" />
+    <meta property="og:description" content="website for TREC 2024 Product Search Track" />
+    <link rel="canonical" href="https://trec-product-search.github.io/index.html" />
+    <meta property="og:url" content="https://trec-product-search.github.io/index.html" />
+    <meta property="og:site_name" content="trec product search" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:title" content=" TREC 2024 Product Search Track"" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8N7CE1L36"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K8N7CE1L36');
+    </script>
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+	  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
+    </style>
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <h1>End To End Product Retrieval</h1>
+      <h2 id="coordinators">Coordinators</h2>
+      <p> <a href='https://twitter.com/kallumadi?lang=en'> Surya Kallumadi(Lowes)</a>, <a href='https://spacemanidol.com/'>Daniel Campos (University of Illinois)</a>, Sahiti Labhishetty (Target), <a href='http://czhai.cs.illinois.edu/'>ChengXiang Zhai (University of Illinois)</a>, <a href='https://www.linkedin.com/in/alemagnani/'>Alessandro Magnani (Walmart)</a></p>
+      <div id="mc_embed_signup">
+          <form action="https://github.us21.list-manage.com/subscribe/post?u=e4f0c0ae69016a1dc61978146&amp;id=a8af48cfa8&amp;f_id=00a598e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <h2>Subscribe For TREC Product Search Updates</h2>
+              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+              <div class="mc-field-group">
+                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+              </div>
+              <div id="mce-responses" class="clear foot">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e4f0c0ae69016a1dc61978146_a8af48cfa8" tabindex="-1" value=""></div>
+              <div class="optionalParent">
+                <div class="clear foot">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                  <p class="brandingLogo"><a href="http://eepurl.com/iprH0A" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                </div>
+              </div>
+            </div>
+          </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>                                                                  
+      <h2 id="timetable">Timetable</h2>
+      <ul>
+        <li>TBD: 2024 queries released to participants for all tasks</li>
+	<li>TBD: Submissions open for all tasks</li>
+        <li>TBD: Submissions close for all tasks</li>
+        <li>November ish: TREC conference</li>
+      </ul>
+      <h2 id="introduction">Introduction</h2>
+      <p>The Product Search Track studies information retrieval in the field of product search. This is the case where there is a corpus of many products where the user goal and intent is to find the product that suits their need. </p>
+      <p>Our main goal is to study what how end to end retrieval systems can be built and evaluated given a large set of products.</p>
+      <h2 id="track-tasks">Track Tasks</h2>
+      <p>The product search track one task, end to end retrieval. Each TREC participant group can submit up to ten runs independly of what approaches are used.</p>
+      <p>The dataset builds on the <a href='https://arxiv.org/abs/2311.07861'> 2023 TREC Product Search Track</a> which itself is based on the <a href='https://amazonkddcup.github.io/'>ESCI Challenge for Improving Product Search</a>. Unlike last year, in 2024 the focus is not on generating a collection but exploring methods for generating sythetic queries via simulation and leveraging large language models. </p>
+      <p>Given the corpus retrieval can happen in at least three ways: re-ranking, text only retrieval, and multi-modal retrieval. For re-ranking given an intial set of 1000 documents for each query extracted using a BM25 baseline, research groups can focus on re-ranking the existing results using any modeling approach. </p>
+      <p>For text only retrieval there task formulation is much like re-ranking but without the top 1000 documents as these must be generated by the research group using the text for each product. Finally in multimodal retrieval the usage of the additional information in the form of images, reviews, and product taxonomy can be used to improve retrieval or ranking performance. </p>
+      <h2 id="use-of-external-information">Use of external information</h3>
+      <p>You are allowed to use external information while developing your runs. When you submit your runs, please fill in a form listing what evidence you used, for example an external corpus such as Wikipedia or a pre-trained model or some proprietary corpus.</p>
+      <p>When submitting runs, participants will be able to indicate what resources they used. This will allow us to analyze the runs and break they down into types.</p>
+      <h3 id="datasets">Datasets</h3>
+      <p>As mentioned above, each of the tasks share training data and test queries so there is only one dataset provided below</p>
+      <p>All datasets can be found on Hugginface under the organization of <a href='https://huggingface.co/trec-product-search'>TREC Product Search. There are many varians of the collection in the huggingface repo with JSON, Parqueet, and other variants. With regards to collection there exists the simple collection, which only features product titles and description, and the full collections which includes metadata such as review and product taxonomy. </a>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Filename</th>
+            <th style="text-align: right">File size</th>
+            <th style="text-align: right">Num Records</th>
+            <th style="text-align: right">Description</th>
+            <th>Format</th>
+          </tr>
+        </thead>
+        <tbody>
+	  <tr>
+            <td>Query to Query ID</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/qid2query.tsv">Query2QueryID </a></td>
+            <td style="text-align: right">946 KB</td>
+            <td style="text-align: right">30,734</td>
+            <td style="text-align: right">TREC style QueryID to Query Text</td>
+            <td>tsv: qid, query</td>
+          </tr>					 
+          <tr>
+            <td>Collection</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/trec/collection.trec.gz">Collection (TREC Format)</a</td>
+            <td style="text-align: right">1.81 GB (568 MB compressed)</td>
+            <td style="text-align: right">1,661,907</td>
+            <td style="text-align: right">TREC style corpus collection</td>
+            <td>tsv: docid, Title, Description</td>
+          </tr>
+          <tr>
+            <td>Train QREL (ESCI)</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Qrels-v0.1/resolve/main/data/train/product-search-train.qrels.gz">Train QRELS (TREC Format)</a</td>
+            <td style="text-align: right">6.8 MB (2.1 MB compressed)</td>
+            <td style="text-align: right">392,119</td>
+            <td style="text-align: right">Train QRELs</td>
+            <td>tsv: qid, 0, docid, relevance label </td>
+	  </tr>				
+	  <tr>
+            <td>Dev QREL (ESCI)</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Qrels-v0.1/resolve/main/data/dev/product-search-dev.qrels.gz">Dev QRELS (TREC Format)</a</td>
+            <td style="text-align: right">2.9 MB (906 KB compressed)</td>
+            <td style="text-align: right">169,952</td>
+            <td style="text-align: right">Dev QRELs</td>
+            <td>tsv: qid, 0, docid, relevance label </td>
+          </tr>
+	  <tr>
+            <td> 2023 Test Queries</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/product-search-2023-queries">2023 Test Queries (TREC Format)</a</td>
+            <td style="text-align: right">12 KB (7 KB compressed)</td>
+            <td style="text-align: right">186</td>
+            <td style="text-align: right">2023 Test Queries</td>
+            <td>tsv: qid, query text </td>
+          </tr>
+	  <tr>
+            <td>2023 Test QREL Synthetic (Non NIST) </td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Qrels-v0.1/blob/main/data/test/product-search-test.qrels.gz">2023 Test QREL Synthetic (Non NIST) (TREC Format)</a</td>
+            <td style="text-align: right">18kb (6 KB compressed)</td>
+            <td style="text-align: right">998</td>
+            <td style="text-align: right">2023 Test QREL Synthetic (Non NIST)</td>
+            <td>tsv: qid, 0, docid, relevance label </td>
+          </tr>
+	  <tr>
+            <td>2023 Test QRELS (NIST Judged)</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/product-search-2023-queries">2023 Test QREL (TREC Format)</a</td>
+            <td style="text-align: right">2.1 MB (460 KB compressed)</td>
+            <td style="text-align: right">115490</td>
+            <td style="text-align: right">2023 Test Qrels</td>
+            <td>tsv: qid, 0, docid, relevance label </td>
+          </tr>
+	   <tr>
+            <td> 2024 Test Queries</td>
+            <td><a href="">2024 Test Queries (TREC Format)</a</td>
+            <td style="text-align: right">TBD</td>
+            <td style="text-align: right">TBD</td>
+            <td style="text-align: right">2024 Test Queries</td>
+            <td>tsv: qid. query text </td>
+          </tr>
+	  <tr>
+            <td>Training Triples (Query, Positive, Negative Pairs)</td>
+            <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Triples/resolve/main/train.jsonl.gz">Train Triples JSONl</a></td>
+            <td style="text-align: right">6.23 GB (1.28 GB compressed)</td>
+            <td style="text-align: right">20,888</td>
+            <td style="text-align: right">Training Triples json format</td>
+            <td>json: qid, query, positive passages, negative passages</td>
+          </tr>
+	  <tr>
+            <td>Top 100 BM25 (Pyserini Simple Context) 2024 Queries</td>
+            <td><a href="">Top 100 Train BM25 Simple</a></td>
+            <td style="text-align: right">TBD</td>
+            <td style="text-align: right">TBD</td>
+            <td style="text-align: right">BM25 top 100 For 2024 Queries</td>
+            <td>tsv: qid, doc_id, rank, score, run-name</td>
+          </tr>
+	  <tr>
+            <td>Top 100 BM25 (Pyserini Full Context) 2024 Queries</td>
+            <td><a href="">Top 100 Train BM25 Simple</a></td>
+            <td style="text-align: right">TBD</td>
+            <td style="text-align: right">TBD</td>
+            <td style="text-align: right">BM25 top 100 For 2024 Queries</td>
+            <td>tsv: qid, doc_id, rank, score, run-name</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="getting-started">Getting Started/Tevatron Usage</h2>
+      <p>To allow quick experimentation we have gone ahead and made the datasets compatible with the popular <a href="https://github.com/texttron/tevatron/">Tevatron </a> library. To train, index, and retrieve from the product search researchs can take the <a href='https://github.com/texttron/tevatron/blob/main/examples/example_msmarco.md'> Tevatron MSMARCO Example Guide</a> and just update the dataset names and run with your favorite model variant. For simplicity an example is shown below. </p>
+      <ul>
+	      <li>First go ahead and train a model using the triples and a simple bert-base bi-encoder model using: python -m tevatron.driver.train --output_dir product_search_bi_encoder_baseline --model_name_or_path bert-base-uncased --dataset_name trec-product-search/Product-Search-Triples </li>
+	      <li>Using your trained model (or any other trained bi-encoder) go ahead and encode the corpus using this command: python -m tevatron.driver.encode --output_dir=temp --model_name_or_path product_search_bi_encoder_baseline --dataset_name trec-product-search/product-search-corpus --encoded_save_path corpus_emb.pkl --encode_num_shard 1 --encode_shard_index 0</li>
+      	      <li>Go ahead and create the query embeddings for the 2023 queries using the following command: python -m tevatron.driver.encode --output_dir=temp  --model_name_or_path product_search_bi_encoder_baseline   --dataset_name trec-product-search/Product-Search-Triples/test  --encoded_save_path query_emb.pkl  --q_max_len 32  --encode_is_qry</li>
+	      <li>Using the product and query embeddings retrieve top results using the following command: python -m tevatron.faiss_retriever --query_reps query_emb.pkl --passage_reps corpus_emb.pkl -depth 100 --batch_size -1 --save_text --save_ranking_to run.txt</li>
+	      <li>Convert the ranking to TREC format: python -m tevatron.utils.format.convert_result_to_trec --input run.txt --output run.trec</li>
+	      <li>Evaluate with TREC eval or ir_measures using the 2023 QRELs listed above: ir_measures product_qrel.trec run.trec NDCG@1 NDCG@3 NDCG@5 NDCG@10 NDCG@100 NDCG@1000 AP@1 AP@3 AP@5 AP@10 AP@100 AP@1000</li>
+      </ul>
+      <h2 id="submission-evaluation-and-judging">Submission, evaluation and judging</h2>
+      <p>We will be following the classic TREC submission formating, which is repeated below. White space is used to separate columns. The width of the columns in the format is not important, but it is important to have exactly six columns per line with at least one space between the columns.</p>
+      <p>, where:</p>
+      <div class="language-text highlighter-rouge">
+          <div class="highlight">
+	      <pre class="highlight">
+                  <code>
+		      1 Q0 pid1    1 2.73 runid1
+		      1 Q0 pid2    1 2.71 runid1
+		      1 Q0 pid3    1 2.61 runid1
+		      1 Q0 pid4    1 2.05 runid1
+		      1 Q0 pid5    1 1.89 runid1
+      	          </code>
+	      </pre>
+	  </div>
+      </div>
+      <ul>
+        <li>the first column is the topic (query) number.</li>
+        <li>the second column is currently unused and should always be “Q0”.</li>
+        <li>the third column is the official identifier of the retrieved passage in context of passage ranking task, and the identifier of the retrieved document in context of document ranking task.</li>
+        <li>the fourth column is the rank the passage/document is retrieved.</li>
+        <li>the fifth column shows the score (integer or floating point) that generated the ranking. This score <strong>must</strong> be in descending (non-increasing) order.</li>
+        <li>The sixth column is the ID of the run you are submitting.</li>
+      </ul>
+      <p>As the official evaluation set, we provide a set of 926 queries where 50 or more will be judged by NIST assessors. For this purpose, NIST will be using depth pooling with separate pools each tasks. Products in these pools will then be labelled by NIST assessors using multi-graded judgments, allowing us to measure NDCG.</p>
+      <p>The main type of TREC submission is <em>automatic</em>, which means there was not manual intervention in running the test queries. This means you should not adjust your runs, rewrite the query, retrain your model, or make any other sorts of manual adjustments after you see the test queries. The ideal case is that you only look at the test queries to check that they ran properly (i.e. no bugs) then you submit your automatic runs. However, if you want to have a human in the loop for your run, or do anything else that uses the test queries to adjust your model or ranking, you can mark your run as <em>manual</em> and provide a description of what types of alterations were performed. </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
