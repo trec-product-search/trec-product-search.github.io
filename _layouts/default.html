@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/cc765b5db3.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">TREC Tip-of-the-Tongue (ToT) Track</h1>
+      <h3 class="project-tagline"><i>Tip of the tongue: The phenomenon of failing to recall something from memory, combined with partial recall and the feeling that recall is imminent</i></h3>
+      <h1 class="project-tagline">Follow us: &nbsp;&nbsp;<a href="https://twitter.com/TREC_ToT" class="fab fa-twitter" style="font-size:24px;color:white" target="_blank"></a>&nbsp;&nbsp;<a href="https://idf.social/@TREC_ToT" class="fab fa-mastodon" style="font-size:24px;color:white" target="_blank"></a>&nbsp;&nbsp;<a href="https://groups.google.com/g/trec_tot" class="fab fa-google" style="font-size:24px;color:white" target="_blank"></a></h1>
+      <a href="index" class="btn">Overview</a>
+      <a href="guidelines" class="btn">Guidelines</a>
+      <a href="previous" class="btn">Previous editions</a>
+      <a href="references" class="btn">References</a>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+      </footer>
+    </main>
+  </body>
+</html>
