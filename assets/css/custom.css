@@ -1,0 +1,84 @@
+/* Change the header gradient to a calm dark blue spectrum */
+.page-header {
+    background: linear-gradient(90deg, #0a3d62, #1e5799, #3c8dbc, #5dade2);
+    color: white;
+  }
+  
+  /* Change the background of the page */
+  body {
+    background-color: #f0f5fa; /* Soft blue-gray */
+    color: #333;
+  }
+  
+  /* Change button colors */
+  .btn {
+    background-color: #07376d;
+    color: white;
+    border: none;
+  }
+  
+  .btn:hover {
+    background-color: #0a3d62;
+  }
+  
+  /* Change footer color */
+  .site-footer {
+    background-color: #1e3a5f;
+    color: white;
+  }
+  
+  /* Change link colors */
+  a {
+    color: #3c8dbc;
+  }
+  
+  a:hover {
+    color: #5dade2;
+  }
+
+/* Style Markdown Headings in index.md and other pages */
+.main-content h1 {
+    color: #194981; /* Dark Blue */
+    font-weight: bold;
+  }
+  
+  .main-content h2 {
+    color: #34789f; /* Medium Blue */
+    font-weight: bold;
+  }
+  
+  .main-content h3 {
+    color: #4e8fba; /* Light Blue */
+    font-weight: bold;
+  }
+  
+  /* Optional: Add a border or background to make headings stand out */
+  .main-content h1 {
+    border-bottom: 3px solid #194981;
+    padding-bottom: 5px;
+  }
+  
+  .main-content h2 {
+    border-bottom: 2px solid #34789f;
+    padding-bottom: 4px;
+  }
+  
+  .main-content h3 {
+    border-bottom: 1px solid #4e8fba;
+    padding-bottom: 3px;
+  }
+  
+  /* Change paragraph text color */
+  .main-content p {
+    color: #333; /* Dark Gray */
+  }
+  
+  /* Change links inside Markdown */
+  .main-content a {
+    color: #2d7844; /* Orange */
+  }
+  
+  .main-content a:hover {
+    color: #0a7201; /* Darker Orange */
+  }
+  
