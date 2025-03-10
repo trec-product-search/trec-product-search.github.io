@@ -11,8 +11,7 @@ layout: default
 * 2023: <a href="2024.html">Website</a>
 
 # Previous Data
-- [2024 Datasets](#2024-datasets)
-- [2023 Datasets](#2023-datasets)
+
 
 ---
 
