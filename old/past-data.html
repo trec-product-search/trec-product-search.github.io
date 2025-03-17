@@ -1,0 +1,184 @@
+<!-- <!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Past Data - TREC Product Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .nav-link.active {
+            font-weight: bold;
+            border-bottom: 2px solid #0d6efd;
+        }
+        .table-section {
+            padding: 2rem;
+        }
+        .table-custom thead {
+            background-color: #0d6efd !important;
+            color: #020202 !important;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">TREC Product Search and Recommendations</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Past Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="2024.html">2024</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">2025</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container table-section">
+    <h2 class="mb-4 text-center">Past Data Archives</h2>
+    <nav class="mb-4 d-flex justify-content-center">
+        <ul class="nav nav-pills shadow-sm p-2 rounded" style="background-color: #e4eaf1;">
+            <li class="nav-item">
+                <a class="nav-link btn btn-outline-primary mx-1" href="#2024">2024 Datasets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-outline-primary mx-1" href="#2023">2023 Datasets</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h3 id="2024">2024 Datasets</h3>
+    <table class="table table-striped table-hover">
+        <thead style="background-color: #0d6efd; color: white;">
+            <tr>
+                <th>Type</th>
+                <th>Filename</th>
+                <th style="text-align: right">File Size</th>
+                <th style="text-align: right">Num Records</th>
+                <th style="text-align: right">Description</th>
+                <th>Format</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Query to Query ID</td>
+                <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/qid2query.tsv">Query2QueryID</a></td>
+                <td style="text-align: right">946 KB</td>
+                <td style="text-align: right">30,734</td>
+                <td style="text-align: right">TREC style QueryID to Query Text</td>
+                <td>tsv: qid, query</td>
+            </tr>
+            <tr>
+                <td>Collection</td>
+                <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/trec/collection.trec.gz">Collection (TREC Format)</a></td>
+                <td style="text-align: right">1.81 GB (568 MB compressed)</td>
+                <td style="text-align: right">1,661,907</td>
+                <td style="text-align: right">TREC style corpus collection</td>
+                <td>tsv: docid, Title, Description</td>
+            </tr>
+            <tr>
+                <td>Train QREL (ESCI)</td>
+                <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Qrels-v0.1/resolve/main/data/train/product-search-train.qrels.gz">Train QRELS (TREC Format)</a></td>
+                <td style="text-align: right">6.8 MB (2.1 MB compressed)</td>
+                <td style="text-align: right">392,119</td>
+                <td style="text-align: right">Train QRELs</td>
+                <td>tsv: qid, 0, docid, relevance label</td>
+            </tr>
+            <tr>
+                <td>Dev QREL (ESCI)</td>
+                <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Qrels-v0.1/resolve/main/data/dev/product-search-dev.qrels.gz">Dev QRELS (TREC Format)</a></td>
+                <td style="text-align: right">2.9 MB (906 KB compressed)</td>
+                <td style="text-align: right">169,952</td>
+                <td style="text-align: right">Dev QRELs</td>
+                <td>tsv: qid, 0, docid, relevance label</td>
+            </tr>
+            <tr>
+                <td>Training Triples (Query, Positive, Negative Pairs)</td>
+                <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Triples/resolve/main/train.jsonl.gz">Train Triples JSONl</a></td>
+                <td style="text-align: right">6.23 GB (1.28 GB compressed)</td>
+                <td style="text-align: right">20,888</td>
+                <td style="text-align: right">Training Triples json format</td>
+                <td>json: qid, query, positive passages, negative passages</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 id="2023">2023 Datasets</h3>
+    <table class="table table-striped table-hover table-custom">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Filename</th>
+                <th style="text-align: right">File Size</th>
+                <th style="text-align: right">Num Records</th>
+                <th style="text-align: right">Description</th>
+                <th>Format</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Test Queries</td>
+                <td><a href="https://huggingface.co/datasets/trec-product-search/product-search-2023-queries">2023 Test Queries (TREC Format)</a></td>
+                <td style="text-align: right">12 KB (7 KB compressed)</td>
+                <td style="text-align: right">186</td>
+                <td style="text-align: right">2023 Test Queries</td>
+                <td>tsv: qid, query text</td>
+            </tr>
+            <tr>
+                <td>Test QREL Synthetic (Non NIST)</td>
+                <td><a href="https://huggingface.co/datasets/trec-product-search/Product-Search-Qrels-v0.1/blob/main/data/test/product-search-test.qrels.gz">2023 Test QREL Synthetic (Non NIST)</a></td>
+                <td style="text-align: right">18 KB (6 KB compressed)</td>
+                <td style="text-align: right">998</td>
+                <td style="text-align: right">2023 Test QREL Synthetic (Non NIST)</td>
+                <td>tsv: qid, 0, docid, relevance label</td>
+            </tr>
+            <tr>
+                <td>Test QRELS (NIST Judged)</td>
+                <td><a href="https://huggingface.co/datasets/trec-product-search/product-search-2023-queries">2023 Test QREL (TREC Format)</a></td>
+                <td style="text-align: right">2.1 MB (460 KB compressed)</td>
+                <td style="text-align: right">115,490</td>
+                <td style="text-align: right">2023 Test Qrels</td>
+                <td>tsv: qid, 0, docid, relevance label</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <h3 id="getting-started">Getting Started/Tevatron Usage</h3>
+      <p>To allow quick experimentation we have gone ahead and made the datasets compatible with the popular <a href="https://github.com/texttron/tevatron/">Tevatron </a> library. To train, index, and retrieve from the product search researchs can take the <a href='https://github.com/texttron/tevatron/blob/main/examples/example_msmarco.md'> Tevatron MSMARCO Example Guide</a> and just update the dataset names and run with your favorite model variant. For simplicity an example is shown below. </p>
+      <ul>
+	      <li>First go ahead and train a model using the triples and a simple bert-base bi-encoder model using: python -m tevatron.driver.train --output_dir product_search_bi_encoder_baseline --model_name_or_path bert-base-uncased --dataset_name trec-product-search/Product-Search-Triples </li>
+	      <li>Using your trained model (or any other trained bi-encoder) go ahead and encode the corpus using this command: python -m tevatron.driver.encode --output_dir=temp --model_name_or_path product_search_bi_encoder_baseline --dataset_name trec-product-search/product-search-corpus --encoded_save_path corpus_emb.pkl --encode_num_shard 1 --encode_shard_index 0</li>
+      	      <li>Go ahead and create the query embeddings for the 2023 queries using the following command: python -m tevatron.driver.encode --output_dir=temp  --model_name_or_path product_search_bi_encoder_baseline   --dataset_name trec-product-search/Product-Search-Triples/test  --encoded_save_path query_emb.pkl  --q_max_len 32  --encode_is_qry</li>
+	      <li>Using the product and query embeddings retrieve top results using the following command: python -m tevatron.faiss_retriever --query_reps query_emb.pkl --passage_reps corpus_emb.pkl -depth 100 --batch_size -1 --save_text --save_ranking_to run.txt</li>
+	      <li>Convert the ranking to TREC format: python -m tevatron.utils.format.convert_result_to_trec --input run.txt --output run.trec</li>
+	      <li>Evaluate with TREC eval or ir_measures using the 2023 QRELs listed above: ir_measures product_qrel.trec run.trec NDCG@1 NDCG@3 NDCG@5 NDCG@10 NDCG@100 NDCG@1000 AP@1 AP@3 AP@5 AP@10 AP@100 AP@1000</li>
+      </ul>
+
+<footer>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> -->
