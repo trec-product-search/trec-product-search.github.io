@@ -1,20 +1,24 @@
 title: TREC Product Search and Recommendations Track
 email: rikiya.takehi@fuji.waseda.jp
 description: >-
-  Advancing multimodal retrieval and recommendation methods for online product discovery experiences
+  Advancing multimodal retrieval and recommendation methods for online product discovery experiences.
 
 # Base settings
-baseurl: "/trec-product-search.github.io"  # Blank for local testing
-url: "https://rikiyat.github.io"  # Your GitHub Pages domain
+baseurl: "/trec-product-search.github.io"  # This ensures correct asset paths
+url: "https://rikiyat.github.io"  # GitHub Pages domain
 
 twitter_username: rikiya_takehi
-github_username:  RikiyaT 
+github_username: RikiyaT 
 
 # Build settings
-remote_theme: pages-themes/cayman
-theme: jekyll-theme-cayman
+remote_theme: pages-themes/cayman@v0.2.0
+theme: jekyll-theme-cayman  # Force GitHub Pages to apply Cayman
+
 plugins:
   - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 
 kramdown:
   parse_block_html: true
