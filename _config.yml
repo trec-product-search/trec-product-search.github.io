@@ -12,7 +12,6 @@ github_username:  RikiyaT
 
 # Build settings
 remote_theme: pages-themes/cayman@v0.2.0
-theme: jekyll-theme-cayman
 plugins:
   - jekyll-remote-theme
 
