@@ -4,7 +4,7 @@ description: >-
   Advancing multimodal retrieval and recommendation methods for online product discovery experiences.
 
 # Base settings
-baseurl: "/trec-product-search.github.io"  # This ensures correct asset paths
+baseurl: "/trec-product-search"  # This ensures correct asset paths
 url: "https://rikiyat.github.io"  # GitHub Pages domain
 
 twitter_username: rikiya_takehi
