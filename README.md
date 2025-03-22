@@ -1,1 +1,1 @@
-TREC Product Search 2023-2025
+TREC Product Search and Recommendations Track
