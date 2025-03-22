@@ -3,28 +3,32 @@ email: rikiya.takehi@fuji.waseda.jp
 description: >-
   Advancing multimodal retrieval and recommendation methods for online product discovery experiences.
 
-# Base settings
-baseurl: "/trec-product-search.github.io"  # This ensures correct asset paths
-url: "https://rikiyat.github.io"  # GitHub Pages domain
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-cayman
 
-twitter_username: rikiya_takehi
-github_username: RikiyaT 
-incremental: true
+# # Base settings
+# baseurl: "/trec-product-search.github.io"  # This ensures correct asset paths
+# url: "https://rikiyat.github.io"  # GitHub Pages domain
+
+# twitter_username: rikiya_takehi
+# github_username: RikiyaT 
+# incremental: true
 
 
-# Build settings
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-  - jekyll-remote-theme
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
+# # Build settings
+# remote_theme: pages-themes/cayman@v0.2.0
+# plugins:
+#   - jekyll-remote-theme
+#   - jekyll-sitemap
+#   - jekyll-seo-tag
+#   - jekyll-feed
 
-kramdown:
-  parse_block_html: true
+# kramdown:
+#   parse_block_html: true
 
-markdown: CommonMarkGhPages
+# markdown: CommonMarkGhPages
 
-commonmark:
-  options: ["UNSAFE", "SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+# commonmark:
+#   options: ["UNSAFE", "SMART", "FOOTNOTES"]
+#   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
