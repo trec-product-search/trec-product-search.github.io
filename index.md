@@ -17,8 +17,11 @@ Online shopping has drastically reshaped consumer expectations, emphasizing spee
 - **Conference:** November 18th @ Gaithersburg, MD  
 
 ## Subscribe for Track Updates
-
-<a href="subscribe.html" style="display: inline-block; background-color:rgb(15, 56, 100); color: white; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 5px; text-decoration: none; text-align: center;">Click Here to Subscribe</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScegOnswbF4BLg3zJ527VImaMY7hw_SY2rrmod98-iq62iD9A/viewform?usp=dialog"
+   style="display: inline-block; background-color:rgb(15, 56, 100); color: white; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 5px; text-decoration: none; text-align: center;"
+   target="_blank">
+   Click Here to Subscribe
+</a>
 
 ## Tasks
 
