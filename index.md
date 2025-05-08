@@ -10,6 +10,9 @@ Online shopping has drastically reshaped consumer expectations, emphasizing spee
 
 
 # Guidelines
+
+- [Recommendation Instructions](recommendations.md)
+
 ## Important Dates
 
 - **Data release:** TBD  
@@ -38,6 +41,8 @@ This task addresses the nuanced challenge of identifying item relationships, suc
 
 - Identify nuanced relationships (complementary, substitute, compatible).
 - Develop ranked lists for complementary and substitute products based on a seed product.
+
+Details are in the [recommendation task instructions](recommendations.md)
 
 ## Instructions and Datasets
 Detailed instructions and datasets will be released soon. Please subscribe and wait.
