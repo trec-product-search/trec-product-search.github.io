@@ -6,12 +6,13 @@ layout: default
 
 # Overview
 
-Online shopping has drastically reshaped consumer expectations, emphasizing speed, convenience, and accuracy. The TREC Product Search and Recommendations Track aims to advance research in product search and recommendation systems by creating robust, **high-quality datasets** that enable the evaluation of end-to-end multimodal retrieval and nuanced product recommendation algorithms. The dataset spans diverse products across multiple languages and includes both textual descriptions and visual content, designed specifically to reflect real-world e-commerce search and recommendation challenges.
+Online shopping has drastically reshaped consumer expectations, emphasizing speed, convenience, and accuracy. The TREC Product Search and Recommendations Track aims to advance research in product search and recommendation systems by creating **robust, high-quality datasets** that enable the evaluation of end-to-end multimodal retrieval and nuanced product recommendation algorithms. The dataset spans diverse products across multiple languages and includes both textual descriptions and visual content, designed specifically to reflect real-world e-commerce search and recommendation challenges.
 
 
 # Guidelines
 
-- [Recommendation Instructions](recommendations.md)
+- [Search Task Instructions](search.md)
+- [Recommendation Task Instructions](recommendations.md)
 
 ## Important Dates
 
@@ -34,6 +35,8 @@ Participants are tasked with enhancing retrieval effectiveness through advanced 
 
 - Improve query realism and diversity using synthetic data generation techniques.
 - Focus specifically on task-oriented queries (e.g., "birthday party essentials").
+
+Details are in the [search task instructions](search.md)
 
 ### Recommendation Task: Item-to-Item Relations
 
@@ -60,16 +63,16 @@ We will be following the classic TREC submission formatting, which is outlined b
 ```
 
 Where:
-- The **first column** is the topic (query) number.
+- The **first column** is the topic (query/product) number.
 - The **second column** is currently unused and should always be `"Q0"`.
-- The **third column** is the official identifier of the retrieved passage (in passage ranking) or document (in document ranking).
-- The **fourth column** is the rank at which the passage/document is retrieved.
+- The **third column** is the official identifier of the retrieved/recommended product.
+- The **fourth column** is the rank at which the product is retrieved/recommended.
 - The **fifth column** shows the score (integer or floating point) that generated the ranking. This score **must** be in descending (non-increasing) order.
 - The **sixth column** is the ID of the run being submitted.
 
-### Evaluation Process
+<!-- ### Evaluation Process
 
-As the official evaluation set, we provide a set of **926 queries**, where **50 or more** will be judged by NIST assessors. For this purpose, NIST will be using **depth pooling** with separate pools for each task. Products in these pools will then be labeled by NIST assessors using **multi-graded judgments**, allowing us to measure **NDCG**.
+As the official evaluation set, we provide a set of **926 queries**, where **50 or more** will be judged by NIST assessors. For this purpose, NIST will be using **depth pooling** with separate pools for each task. Products in these pools will then be labeled by NIST assessors using **multi-graded judgments**, allowing us to measure **NDCG**. -->
 
 ### Submission Types
 

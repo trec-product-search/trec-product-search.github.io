@@ -26,7 +26,7 @@ layout: default
   <div style="margin-left: 200px;">
     <b>ChengXiang Zhai</b>
     <br/>University of Illinois Urbana-Champaign
-    <br/>Illinous, United States
+    <br/>Illinois, United States
     <p>
         <a href="https://czhai.cs.illinois.edu/" class="fa fa-home" style="font-size:24px;color:grey" target="_blank"></a>
     </p>
@@ -60,6 +60,21 @@ layout: default
     <p>
         <a href="https://rikiyat.github.io/" class="fa fa-home" style="font-size:24px;color:grey" target="_blank"></a>
         &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://x.com/rikiyatakehi" class="fab fa-twitter" style="font-size:24px;color:grey" target="_blank"></a>
+    </p>
+  </div>
+</div>
+</p>
+<p>
+<div style="width: 100%; overflow: hidden;">
+  <div style="float: left;">
+    <img src="img/dean.jpg" alt="Avatar" style="height:130px;border-radius:50%">
+  </div>
+  <div style="margin-left: 200px;">
+    <b>Dean Alvarez</b>
+    <br/>University of Illinois Urbana-Champaign
+    <br/>Illinois, United States
+    <p>
+        <a href="https://deanalvarez.github.io" class="fa fa-home" style="font-size:24px;color:grey" target="_blank"></a>
     </p>
   </div>
 </div>

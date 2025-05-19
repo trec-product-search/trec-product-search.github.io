@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Recommendation Task Instructions
 
 Many e-commerce sites provide various forms of *related product*
