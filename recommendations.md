@@ -23,30 +23,35 @@ Because related-product recommendation lists are often short, we will be using s
 
 ## Training and Preparatory Data
 
-We are providing the following data to track participants (coming soon):
+[repo]: https://huggingface.co/datasets/trec-product-search/product-recommendation-2025/
+[README]: https://huggingface.co/datasets/trec-product-search/product-recommendation-2025/blob/main/initial/README.md
 
-* Product metadata and user purchase session data from the [Amazon M2][M2] data set.  
-* Annotated search results from the [Amazon ESCI][ESCI] data set.  
-* Annotated training and validation data synthesized from the annotations in the [Amazon ESCI][ESCI] data set, along with the synthesis code for reference and synthesis of additional training data. ESCI is a search data set; the recommendation data is generated from its annotations by selecting the Exact product as the reference item, and using the Substitute and Complementary annotations to assess relationships to the Exact item instead of to the query. One of our hopeful meta-outcomes for this task is a better understanding of how that data compares to annotations generated specifically for the related-product recommendation task.
-* Documentation for linking the provided data with the [Amazon reviews and product data](https://amazon-reviews-2023.github.io/) provided by Julian Mcauley’s research group at UCSD (for reference and supplementary training data if desired, not a formal part of the task).
+We have provided the following data to track participants, available [on HuggingFace][repo]:
 
-Precise details on the subset that forms the corpus are forthcoming, but all
-products used as query items or expected to be recommended will be from the M2
-and/or ESCI data sets.  Amazon product identifiers are consistent across both
-data sets.
+* A product corpus curated from [Amazon M2][M2] and [Amazon ESCI][ESCI], filtered to only include items also available in the Mcauley Lab's Amazon reviews data.
+* Training / validation queries and qrels for the Substitute and Complementary subtasks, synthesized from Amazon ESCI (see [README][] for details).
+
+All data is recorded with ASINs, so your model can be trained by cross-linking it with other public datasets:
+
+* [Amazon M2][M2] (user purchase sessions)
+* [Amazon ESCI][ESCI] (annotated search results)
+* [Amazon reviews and product data][UCSD]
+
+Our repository also contains copies of the relevant pieces of the original M2 and ESCI data sets, pursuant to their Apache licenses.
 
 [ESCI]: https://amazonkddcup.github.io/
 [M2]: https://kddcup23.github.io/
+[UCSD]: https://amazon-reviews-2023.github.io/
 
 ## Task Definition and Query Data
 
 The “query” data will consist of a set of requests for related product recommendations. Each request contains a single Amazon product ID (the *reference item*). For each reference item, the system should produce (and teams submit) **three** output lists:
 
 1. A ranked list of 100 related items, with an annotation as to whether they are complementary or substitute. This will be used to generate deeper pools for evaluation.  
-2. A list of 10 **Top Complementary** items.  
+2. A list of 10 **Top Complementary** items.
 3. A list of 10 **Top Substitute** items.
 
-The query data will be in a TSV file with 2 columns (query ID and product ID). Output data should be a TSV file in the 6-column TREC runs format (qid, iter, product, rank, score, runID), with QIDs derived from the input QIDs (for input query 3, the outputs should be recorded as qids 3R, 3C, and 3S).
+The query data will be in a TSV file with 2 columns (query ID and product ID). Output data should be a TSV file in the 6-column TREC runs format (qid, iter, product, rank, score, runID), with QIDs derived from the input QIDs (for input query 3, the outputs should be recorded as qids 3R, 3C, and 3S).  The training data above provides qrels for the `C` and `S` subtasks.
 
 Participant solutions are not restricted to the training data we provide — it is acceptable to enrich the track data with additional data sources such as the Amazon Review datasets for training or model operation.
 
@@ -78,9 +83,9 @@ We will compute supplementary metrics including:
 * Agreement of annotations in the long (pooling) run.  
 * **Diversity** of the substitute and complementary product lists, computed over fine-grained product category data from the 2023 Amazon Reviews data set.
 
-## **Timeline**
+## Timeline
 
-* Task Data Release: May 15, 2025  
+* Task Data Release: **Initial data now available**
 * Development Period: Summer 2025
 * Test Query Release: Late August 2025
 * Submission Deadline: Early Sept. 2025
