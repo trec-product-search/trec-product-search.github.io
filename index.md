@@ -50,7 +50,8 @@ Details are in the [recommendation task instructions](recommendations.md)
 ## Instructions and Datasets
 Detailed instructions will be released soon. Please subscribe and wait.
 
-For code see our github repo here: <a href="https://huggingface.co/trec-product-search">Github Repo</a>
+For code see our github repo here: <a href="https://github.com/inertia-lab/trec-product-search-recs">Github Repo</a>
+
 For datasets see our Huggingface repo here: <a href="https://huggingface.co/trec-product-search">Huggingface Repo</a>
 
 ## Submission, Evaluation, and Judging

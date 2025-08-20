@@ -93,3 +93,8 @@ For the Interactive Reformulation track, the best-performing reformulated query 
 - Development Period: Summer 2025
 - Test Query Release: Late August 2025
 - Submission Deadline: Early September 2025
+
+## Repos
+For code see our github repo here: <a href="https://github.com/inertia-lab/trec-product-search-recs/tree/main/search-task-2025">Github Repo</a>
+
+For datasets see our Huggingface repo here: <a href="https://huggingface.co/trec-product-search">Huggingface Repo</a>
