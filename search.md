@@ -27,7 +27,7 @@ In this track, we are focusing on two variations of the query reformulation task
 The goal of both variations is to successfully identify reformulated queries that improve product retrieval effectiveness for task-oriented queries.
 
 ## Training and Preparatory Data
-We are providing the following data to track participants:
+We are providing the following data to track participants, avaliable <a href="https://huggingface.co/trec-product-search"> on HuggingFace</a>:
 
 1. **Product Collection**:
    - A comprehensive dataset of product metadata from the e-commerce domain
@@ -42,7 +42,7 @@ We are providing the following data to track participants:
    - A set of task-oriented queries with original query text
    - Human-annotated reformulated versions of the query
    - Relevance judgments for products in relation to the query
-   - A set of difficult queries from TREC 2024 test set for which BM25 had very low scores
+   - A set of difficult queries from TREC 2024 test set for which BM25 had very low scores (<a href="https://huggingface.co/datasets/trec-product-search/product-search-2025-test-queries">link</a>)
    - TREC 2024 training dataset
 
 ## Task Definition and Query Data
