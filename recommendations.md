@@ -101,7 +101,7 @@ Amazon Review datasets for training or model operation.
 
 ### Query Format
 
-The query data will be in a CSV file with 3 columns: query ID, product ID
+The query data is be in a TSV file with 3 columns: query ID, product ID
 (ASIN), and the product title.
 
 ### Run Format
@@ -114,6 +114,19 @@ qids 3R, 3C, and 3S.
 For the **100-item Pooled runs**, since standard TREC analysis ignores the
 Iteration field (field 2), use it to label items: emit C for complement and S
 for substitute.
+
+The fields are as follows:
+
+1. `qid`: the query identifier (from the query file), with the suffix indicating
+   which list the result is in (`R`, `C`, or `S`).
+2. `iter`: identifier for the round in a multi-round query, generally unused.
+   For the top-100 run, store the relationship type here; for the other runs,
+   either store the relationship type or set to a sential value such as `0`.
+3. `product`: the ASIN of the product in this rank.
+4. `rank`: the rank of the retrieval result.
+5. `score`: the score for this product for this query.
+6. `runID`: the run identifier, usually the name of the system/variant producing
+   these results.
 
 ## Annotation and Relevance
 
