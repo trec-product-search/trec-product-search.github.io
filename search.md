@@ -63,7 +63,9 @@ Reformulated queries can include:
 - More specific product categories or attributes
 - Related task requirements not explicitly mentioned in the original query
 
-The output data should be a TSV file with the original query ID, reformulation type (A for automatic, I1-I4 for interactive variations), and the reformulated query text.
+## Submission Format
+
+Output data should be a TSV file in a 6-column TREC runs format with reformulated query replacing the usual iter column. In other words, the output should be a 6-column TSV file with the following columns: qid, reformulated_query, product_id, rank, score, runID.
 
 ## Annotation and Relevance
 Products retrieved based on the submitted reformulated queries will be pooled and assessed by human evaluators. Each product will be assigned a relevance score using the following criteria:
