@@ -16,8 +16,8 @@ Online shopping has drastically reshaped consumer expectations, emphasizing spee
 
 ## Important Dates
 
-- **Data release:** TBD  
-- **Submission period:** TBD  
+- **Data release:** August 25th
+- **Submission deadline:** September 14th  
 - **Conference:** November 18th @ Gaithersburg, MD  
 
 ## Subscribe for Track Updates

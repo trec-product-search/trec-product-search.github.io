@@ -168,4 +168,4 @@ We will compute supplementary metrics including:
 * Task Data Release: **Now available**
 * Development Period: Summer 2025
 * Test Query Release: **Aug. 25, 2025**
-* Submission Deadline: **Sep. 4, 2025**
+* Submission Deadline: **September 14th**
