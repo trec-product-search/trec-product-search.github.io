@@ -91,10 +91,10 @@ The primary evaluation metrics will be:
 For the Interactive Reformulation track, the best-performing reformulated query (according to the Task Completion NDCG) will be used for the final evaluation.
 
 ## Timeline
-- Task Data Release: May 27, 2025
+- Task Data Release: May 27th
 - Development Period: Summer 2025
-- Test Query Release: Late August 2025
-- Submission Deadline: Early September 2025
+- Test Query Release: August 25th
+- Submission Deadline: September 14th
 
 ## Repos
 For code see our github repo here: <a href="https://github.com/inertia-lab/trec-product-search-recs/tree/main/search-task-2025">Github Repo</a>
